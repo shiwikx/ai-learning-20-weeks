@@ -1,0 +1,12 @@
+name=input("请输入您的姓名：")
+age=input("请输入您的年龄：")
+sex=input("请输入您的性别：")
+print("===个人信息===")
+print("姓名：",name)
+print("年龄：",age)
+print("性别：",sex)
+
+length=input("请输入长方形的长度：")
+width=input("请输入长方形的宽度：")
+area=int(length)*int(width)
+print("长方形的面积是："+str(area))
