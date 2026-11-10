@@ -268,7 +268,7 @@ not(x>5 and （x<10 or x== 20）)
 
 
 
-### 八、列表
+### 八、列表---可变
 
 #### 1、list
 
@@ -407,3 +407,285 @@ print(min(linst1))
 print(sorted(linst1))---从小到大
 
 print(sorted(linst1,reverse=True))--从大到小
+
+
+
+### 九、元组---内容不被删除和修改
+
+tuple1('aaa',) ---加上逗号表示是只有一个元素的元组
+
+print(type(tuple1))
+
+
+
+### 十、字典---可变
+
+#### 1、键：值
+
+key   value
+
+
+
+字典名={
+
+​	键：值
+
+}
+
+例：
+
+idcard={
+
+​	"name":"张三",
+
+​	"sex":"男"
+
+}
+
+
+
+引号---键：值用的是字符串时用引号
+
+小括号---键：值用的是元组时用小括号
+
+
+
+#### 2、查看键值对
+
+idcard={
+
+​	"name":"张三",
+
+​	"sex":"男"
+
+}
+
+print(idcard["name"])
+
+
+
+#### 3、修改键值对的值
+
+idcard={
+
+​	"name":"张三",
+
+​	"sex":"男"
+
+}
+
+idcard["name"]="李四"
+
+print(idcard)
+
+
+
+#### 4、添加键值对
+
+idcard={
+
+​	"name":"张三",
+
+​	"sex":"男"
+
+}
+
+idcard["age"]=18
+
+print(idcard)
+
+
+
+#### 5、删除键值对
+
+idcard={
+
+​	"name":"张三",
+
+​	"sex":"男"
+
+}
+
+del idcard["name"]
+
+print(idcard)
+
+
+
+#### 6、查询键名是否存在
+
+idcard={
+
+​	"name":"张三",
+
+​	"sex":"男"
+
+}
+
+print("name" in idcard)
+
+print("age" in idcard)
+
+
+
+### 十一、for循环
+
+#### 1、可迭代对象：
+
+##### （1）字符串---对每一个字符进行操作
+
+
+
+##### （2）列表---按顺序将里面的元素依次进行操作
+
+
+
+###### （3）字典---idcard={
+
+​	"name":"张三",
+
+​	"sex":"男"
+
+}
+
+###### a、idcard.items()迭代所有键值对
+
+###### b、idcard.keys()迭代所有键
+
+###### c、idcard.values()迭代所有值
+
+
+
+#### 2、for循环样式
+
+**for** 变量 **in** 可迭代对象：
+
+​	循环体代码   --- 每个元素都被翻牌一次
+
+hotpot=["牛肉","羊肉","豆皮","豆腐","粉丝","青菜"]
+
+print("我爱吃火锅里面的：")
+
+**for** food **in** hotpot
+
+​	print(food)
+
+
+
+#### 3、range()函数
+
+##### （1）range(5)   ()---结束值
+
+hotpot=["牛肉","羊肉","豆皮","豆腐","粉丝","青菜"]
+
+​                  0         1         2         3        4         5
+
+print("我爱吃火锅里面的：")
+
+**for** food **in** range(6)
+
+​	print(hotpot)
+
+"牛肉","羊肉","豆皮","豆腐","粉丝","青菜"
+
+
+
+##### （2）range(	2	,	4	)
+
+​		   开始值       结束值
+
+hotpot=["牛肉","羊肉","豆皮","豆腐","粉丝","青菜"]
+
+​                  0         1         2         3        4         5
+
+print("我爱吃火锅里面的：")
+
+**for** food **in** range(2,4)
+
+​	print(hotpot)
+
+"豆皮","豆腐"
+
+
+
+（3）range(	1	,	5	,	2	)
+
+​			开始值       结束值	 步长值---生成的序列间元素的间隔（默认为1）
+
+hotpot=["牛肉","羊肉","豆皮","豆腐","粉丝","青菜"]
+
+​                  0         1         2         3        4         5
+
+print("我爱吃火锅里面的：")
+
+**for** food **in** range(1,5,2)
+
+​	print(hotpot)
+
+"羊肉","豆腐"
+
+
+
+### 十二、while循环
+
+当	....时（条件为真）：
+
+​	    就做 ...
+
+#### 1、while     条件：
+
+​	循环体（需要重复执行的代码）
+
+
+
+#### 2、乌鸦喝水
+
+water_level=10
+
+stone=0
+
+while water_level<100:
+
+​	stone=stone+1
+
+​	water_level=water_level+10
+
+print("小乌鸦投了",stone,"块石头后喝到水啦")
+
+
+
+### 十三、for循环和while循环区别
+
+for循环---知道循环多少次时（range、列表）
+
+while循环---不知道循环多少次但知道何时停止时（条件停止）
+
+
+
+### 十四、控制语句
+
+#### 1、break---跳出
+
+for i in range(5)
+
+​	if i == 2:
+
+​		break
+
+print(i)
+
+0,1
+
+
+
+#### 2、continue---跳过
+
+for i in range(5)
+
+​	if i == 2:
+
+​		continue
+
+print(i)
+
+0,1,3,4
