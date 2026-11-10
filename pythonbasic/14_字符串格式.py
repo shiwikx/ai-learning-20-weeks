@@ -1,0 +1,9 @@
+name="张三"
+age=20
+height=1.82
+#%格式化
+print("大家好，我叫%s,今年%d岁，身高%.2fm"%(name,age,height))
+#format格式化
+print("大家好，我叫{0},今年{1}岁，身高{2}m".format(name,age,height))
+#f-string格式化
+print(f"大家好，我叫{name},今年{age}岁，身高{height}m")
